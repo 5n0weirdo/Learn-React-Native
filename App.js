@@ -5,7 +5,11 @@ import { StyleSheet, Text, View, SafeAreaView, Button } from "react-native";
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Button title="Click me" />
+      <Button
+        color="purple"
+        title="Click me"
+        onPress={() => console.log("Press")}
+      />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
