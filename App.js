@@ -8,10 +8,11 @@ export default function App() {
       <Text>Hello World</Text>
       <Image source={require("./assets/favicon.png")} />
       <Image
+        blurRadius={5}
         source={{
           width: 200,
           height: 300,
-          uri: "https://picsum.photos/200",
+          uri: "https://picsum.photos/200/300",
         }}
       />
 
