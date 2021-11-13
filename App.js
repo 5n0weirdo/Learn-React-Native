@@ -1,7 +1,10 @@
 import React from "react";
-import { View, Image, StyleSheet, SafeAreaView, Button } from "react-native";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
-  return <WelcomeScreen></WelcomeScreen>;
+  return (
+    // <WelcomeScreen></WelcomeScreen>;
+    <ViewImageScreen />
+  );
 }
