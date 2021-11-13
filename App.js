@@ -7,6 +7,7 @@ import {
   SafeAreaView,
   Image,
   TouchableWithoutFeedback,
+  TouchableOpacity,
 } from "react-native";
 
 export default function App() {
@@ -15,7 +16,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <Text>Hello World</Text>
       <Image source={require("./assets/favicon.png")} />
-      <TouchableWithoutFeedback onPress={handlePress}>
+      <TouchableOpacity onPress={handlePress}>
         <Image
           source={{
             width: 200,
@@ -23,7 +24,7 @@ export default function App() {
             uri: "https://picsum.photos/200/300",
           }}
         />
-      </TouchableWithoutFeedback>
+      </TouchableOpacity>
 
       <StatusBar style="auto" />
     </SafeAreaView>
