@@ -9,13 +9,24 @@ import {
   Alert,
   Platform,
   StatusBar,
+  Dimensions,
 } from "react-native";
+import {
+  useDimensions,
+  useDeviceOrientation,
+} from "@react-native-community/hooks";
 
 export default function App() {
+  const { landscape } = useDeviceOrientation();
   return (
     <SafeAreaView style={[styles.container]}>
-      <Button color="purple" title="Click me" />
-      <StatusBar style="auto" />
+      <View
+        style={{
+          backgroundColor: "blue",
+          width: "100%",
+          height: landscape ? "100%" : "30%",
+        }}
+      ></View>
     </SafeAreaView>
   );
 }
