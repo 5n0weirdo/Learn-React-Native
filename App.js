@@ -1,20 +1,29 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View, SafeAreaView, Image } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Image,
+  TouchableWithoutFeedback,
+} from "react-native";
 
 export default function App() {
+  const handlePress = () => console.log("Press");
   return (
     <SafeAreaView style={styles.container}>
       <Text>Hello World</Text>
       <Image source={require("./assets/favicon.png")} />
-      <Image
-        blurRadius={5}
-        source={{
-          width: 200,
-          height: 300,
-          uri: "https://picsum.photos/200/300",
-        }}
-      />
+      <TouchableWithoutFeedback onPress={handlePress}>
+        <Image
+          source={{
+            width: 200,
+            height: 300,
+            uri: "https://picsum.photos/200/300",
+          }}
+        />
+      </TouchableWithoutFeedback>
 
       <StatusBar style="auto" />
     </SafeAreaView>
