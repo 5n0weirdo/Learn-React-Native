@@ -8,7 +8,7 @@ export default function App() {
       <Button
         color="purple"
         title="Click me"
-        onPress={() => console.log("Press")}
+        onPress={() => alert("Button tapped")}
       />
       <StatusBar style="auto" />
     </SafeAreaView>
