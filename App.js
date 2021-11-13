@@ -11,22 +11,13 @@ import {
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Button
-        color="purple"
-        title="Click me"
-        onPress={() =>
-          Alert.alert("My Title", "My message", [
-            { text: "Yes", onPress: () => console.log("Yes") },
-            { text: "No", onPress: () => console.log("No") },
-          ])
-        }
-      />
+    <SafeAreaView style={[styles.container, containerStyle]}>
+      <Button color="purple" title="Click me" />
       <StatusBar style="auto" />
     </SafeAreaView>
   );
 }
-
+const containerStyle = { backgroundColor: "blue" };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
