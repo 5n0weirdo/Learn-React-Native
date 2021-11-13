@@ -10,10 +10,16 @@ export default function App() {
         flex: 1,
         flexDirection: "row",
         justifyContent: "center",
+        alignItems: "center",
       }}
     >
       <View
-        style={{ backgroundColor: "purple", width: 100, height: 100 }}
+        style={{
+          backgroundColor: "purple",
+          width: 100,
+          height: 100,
+          alignSelf: "flex-start",
+        }}
       ></View>
       <View
         style={{ backgroundColor: "black", width: 100, height: 100 }}
